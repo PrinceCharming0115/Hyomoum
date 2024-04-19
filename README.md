@@ -1,49 +1,30 @@
-# Coreum Blockchain
+# Hyomoum Blockchain
 
-Coreum addresses the existing limitations of the current blockchains and empowers a solid foundation for future decentralized projects.
-Coreum’s unique approach is to provide built-in, on-chain solutions to process transactions in a deterministic way to ensure fast, secure, cheap and a green network for a variety of use-cases.
+Hyomoum addresses the existing limitations of the current blockchains and empowers a solid foundation for future decentralized projects.
+Hyomoum’s unique approach is to provide built-in, on-chain solutions to process transactions in a deterministic way to ensure fast, secure, cheap and a green network for a variety of use-cases.
 
 The chain is designed to solve real-world problems at scale by providing native token management systems and Decentralized 
-Exchange (DEX), while being fully decentralized. In addition to the built-on-chain solutions, Coreum uses WebAssembly (WASM)
+Exchange (DEX), while being fully decentralized. In addition to the built-on-chain solutions, Hyomoum uses WebAssembly (WASM)
 to process smart contracts, and utilizes the Tendermint Byzantine Fault Tolerance (BFT) consensus mechanism and Cosmos SDK’s 
 proven Bonded Proof of Stake (BPoS).
 
-Read more on [our website](https://www.coreum.com) and [documentation portal](https://docs.coreum.dev).
-
 ## Build and Play
 
-Coreum blockchain is under development and all the features are going to be added progressively over time.
+Hyomoum blockchain is under development and all the features are going to be added progressively over time.
 Everyone is encouraged to run a chain locally for development and testing purposes.
 
 Entire process of running local chain is automated by our tooling. The only prerequisites are:
 - `docker` installed from your favorite package manager
 - `go 1.18` or newer installed and available in your `PATH`
 
-### Build binaries
-
-Steps to build required binaries:
-1. Clone our [crust repository](https://github.com/CoreumFoundation/crust) to the directory of your choice (let's call it `$COREUM_PATH`):
-```
-$ cd $COREUM_PATH
-$ git clone https://github.com/CoreumFoundation/crust
-```
-2. Not required but recommended: Add `$COREUM_PATH/crust/bin` to your `PATH` environment variable:
-```
-$ export PATH="$COREUM_PATH/crust/bin:$PATH"
-```
-3. Compile all the required binaries and docker images:
-```
-$ $COREUM_PATH/crust/bin/crust build images
-```
-
-After the command completes you may find executable `$COREUM_PATH/crust/bin/cored`, being both blockchain node and client.
+After the command completes you may find executable `$Hyomoum_PATH/crust/bin/cored`, being both blockchain node and client.
 
 ### Start local chain
 
-To start local Coreum blockchain execute:
+To start local Hyomoum blockchain execute:
 
 ```
-$ $COREUM_PATH/crust/bin/crust znet
+$ $Hyomoum_PATH/crust/bin/crust znet
 (znet) [znet] $ start
 ```
 
@@ -56,8 +37,6 @@ To stop and purge the testing environment run:
 ```
 $ $HOME/crust/bin/crust znet remove
 ```
-
-To get all the details on how `znet` tool might be used, go to the [crust repository](https://github.com/CoreumFoundation/crust).
 
 ### Interact with the local chain
 
@@ -98,15 +77,14 @@ Run the query again and you will see that there are now funds in the newly gener
 ```
 
 ## Connect to Running Chains
-Coreum has `mainnet`, `testnet` and `devnet` chains running. In order to connect to any of those networks, get the
-network variables from the docs [here](https://docs.coreum.dev/tutorials/network-variables.html), and
+Hyomoum has `mainnet`, `testnet` and `devnet` chains running. In order to connect to any of those networks, get the
+network variables from the docs [here](https://docs.Hyomoum.dev/tutorials/network-variables.html), and
 provide the correct `node` and `chain-id` flags to the cli command. 
 As an example here is a command to connect to the testnet to get the status:
 
 ```
-$ cored status --chain-id=coreum-testnet-1 --node=https://full-node.testnet-1.coreum.dev:26657
+$ cored status --chain-id=Hyomoum-testnet-1 --node=https://full-node.testnet-1.Hyomoum.dev:26657
 ```
 It should also be mentioned that for development purposes testnet is more stable than devnet.
 
 You can also find block explorers for each chain by this
-[link](https://docs.coreum.dev/tools-ecosystem/block-explorer.html).
